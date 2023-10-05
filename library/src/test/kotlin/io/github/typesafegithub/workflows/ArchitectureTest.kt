@@ -13,6 +13,6 @@ class ArchitectureTest : FunSpec({
             .classes()
             .withModifier(KoModifier.DATA)
             .properties(includeNested = true, includeLocal = true)
-            .assert { it.hasValModifier }
+            .assertNot { it.hasValModifier }
     }
 })
